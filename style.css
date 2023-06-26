@@ -1,0 +1,155 @@
+:root {
+    --red:#ff0000;
+    --lilac:#ecb9eb;
+    --purple:#770584;
+    --deep:#38013a;
+    --blank:#eff4f7;
+} 
+
+* {
+    user-select: none;
+    box-sizing: border-box;
+}
+
+img {
+    max-height: 100%;
+    display: none;
+}
+
+body { 
+    display: flex;
+    flex-flow: column;
+    
+    height: 97vh;
+    padding: 2vh;
+    background-color: var(--deep);
+}
+
+
+/* HEADER */
+
+header {
+    border-radius: 20px 20px 0 0;
+    background-color: var(--purple);
+    color:var(--blank);
+
+    max-height: 17%;
+    flex: 17%; /* try flex 100% and flex-flow: row wrap */
+    
+    display: flex;
+    justify-content: center;
+}
+header figure {
+    margin: 3vh;
+}
+header img {
+    display: flex;
+}
+header h1 {
+    align-self: center;
+}
+
+
+/* MAIN */
+
+main {
+    flex: 51%;
+    max-height: 51%;
+
+    background-color: var(--lilac);
+    padding: 4vh 10vh;
+
+    display: flex;
+    justify-content: space-between;
+}
+main h2 {
+    align-self: center;
+}
+main section {
+    padding: 2vh;
+    flex: 50%;
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 2vh;
+}
+main section div {
+    border-radius: 25px;
+    background-color: var(--blank);
+    max-height: 15%;
+    width: 250px;
+
+    display: flex;
+    justify-content: center;
+}
+main figure {
+    margin: 0;
+
+    display: flex;
+}
+main section figure {
+    max-height: 85%;
+}
+main article {
+    flex: 50%;
+
+    background-color: var(--blank);
+    border-radius: 25px;
+    font-weight: 600;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    font-size: 3vh;
+}
+.parent {
+    display: flex;
+    justify-content: space-evenly;
+}
+.child { 
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.child span:nth-child(1) {
+    color: var(--purple);
+    font-weight: bolder;   
+}
+main img {
+    display: flex;
+    z-index: 1;
+}
+
+
+/* FOOTER */
+
+footer {
+    flex: 33%;
+    max-height: 32%;
+    
+    border-radius: 0 0 20px 20px;
+    background-color: var(--blank);
+    
+    display: flex;
+    align-items: center;
+    padding: 2vh;
+}
+footer img {
+    display: flex;
+    flex-flow: wrap;
+}
+footer figure {
+    margin: 0;
+    padding: 0;
+    width: min-content;
+}
+.othersContainer {
+    display: flex;
+    width: min-content;
+    /* align-items: center; */
+}
+.othersFigs {
+    display: flex;
+    max-height: 200px;
+}

@@ -2,82 +2,102 @@
     --red:#ff0000;
     --lilac:#ecb9eb;
     --purple:#770584;
-    --gray:#38013a;
+    --deep:#38013a;
     --blank:#eff4f7;
 } 
 * {
     user-select: none;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+img {
+    width: auto;
+    height: 100%;
 }
 body {
-    background-color: var(--gray);
-    padding: 4vh;
+    font-family: Ubuntu, system-ui, -apple-system, 
+    BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, 
+    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--deep);
+    padding: 2vh;
+    height: 100vh;
+
+    display: grid;
+    grid-template-areas: 
+    'header header header header header'
+    'main main main main main'
+    'footer footer footer footer footer';
 }
 header {
+    grid-area: header;
     background-color: var(--purple);
-    border-radius: 5vh 5vh 0 0;
-    align-items: center;
-    padding: 2vh;
+    border-radius: 20px 20px 0 0;
+    height: 15vh;
+    
     display: flex;
-
-    & figure img {
-        width: 5em;
-    }
-    & h1 {
-        color: whitesmoke;
-    }
+    align-items: center;
+    justify-content: center;
+}
+header figure {
+    height: inherit;
+    margin: 1vh;
+}
+header figure img {
+    height: inherit;
+    padding: 3vh;
+}
+header h1 {
+    color: whitesmoke;
 }
 
 main {
     background-color: var(--lilac);
-    justify-content: center;
+    height: 50vh;
     display: flex;
-    padding: 3vw;
-    gap: 6vh;
+    padding: 1vh 5vw;
+
+    grid-area: main;
+    gap: 2vw;
 }
 section {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    justify-content:space-between;
 }
 .title {
     display: flex;
-    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
 
     background-color: var(--blank);
-    border-radius: 6vh;
+    border-radius: 25px;
+}
 
-    & figure {
-        margin: 0;
-    }
+.title figure {
+    margin: 0;
+}
 
-    & figure img {
-        width: 7vh;
-        height: 7vh;
-    }
+.title figure img {
+    width: 7vh;
+    height: 7vh;
 }
 .imgCharizard {
     width: 100%;
+    height: auto;
 }
 
 article {
-    font-size:2.5vw;
-    
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-
     background-color: var(--blank);
-    border-radius: 6vw;
-    padding: 3vw;
-    width: 40%;
+    border-radius: 25px;
+    font-size:3vh;
+    width: 100%;
+}
 
-    & span {
-        display: flex;
-        flex-direction: column;
-    }
+article span {
+    display: flex;
+    flex-direction: column;
 }
 .parent {
     display: flex;
@@ -85,35 +105,39 @@ article {
     justify-content: space-around;
 }
 .child {
-    font-weight:700;
-    text-align:center;
-
-    & span:nth-child(1) {
-        color: var(--purple);
-        font-weight: bolder;
-    }
+    font-weight: 700;
+    text-align: center;
+}
+.child span:nth-child(1) {
+    color: var(--purple);
+    font-weight: bolder;
 }
 
-
 footer {
-    
-    & div {
-        border-radius: 0 0 5vh 5vh;
-        display: flex;
-        justify-items: center;
-        align-items: center;
-    }
+    grid-area: footer;
+    height: 35vh;
+}
 
-    & img {
-        width: 100%;
-        display: flex;
-    }
-    
-    & figure {
-        border-radius: 10px;
-        background-color: var(--lilac);
-    }
+footer div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 0 0 5vh 5vh;
+}
+
+footer img {
+    width: 100%;
+    height: auto;
+}
+
+footer figure {
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--lilac);
 }
 .othersContainer {
     background-color: var(--blank);
+    align-items: center;
+    padding-left: 5vh;
+    display: flex;
 }
