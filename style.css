@@ -127,6 +127,7 @@ main img {
 footer {
     flex: 33%;
     max-height: 32%;
+    max-width: 100%;
     
     border-radius: 0 0 20px 20px;
     background-color: var(--blank);
@@ -146,10 +147,12 @@ footer figure {
 }
 .othersContainer {
     display: flex;
-    width: min-content;
+    width: 100%;
     /* align-items: center; */
 }
 .othersFigs {
+    max-width: 100%;
     display: flex;
+    justify-content: space-around;
     max-height: 200px;
 }
