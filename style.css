@@ -14,6 +14,7 @@
 img {
     max-height: 100%;
     display: none;
+    cursor: pointer;
 }
 
 body { 
@@ -21,6 +22,7 @@ body {
     flex-flow: column;
     
     height: 97vh;
+    width: 98vw;
     padding: 2vh;
     background-color: var(--deep);
 }
@@ -47,17 +49,17 @@ header img {
 }
 header h1 {
     align-self: center;
+    cursor: pointer;
 }
 
 
 /* MAIN */
-
 main {
     flex: 51%;
     max-height: 51%;
 
     background-color: var(--lilac);
-    padding: 4vh 10vh;
+    padding: 2vh 40vh;
 
     display: flex;
     justify-content: space-between;
@@ -66,7 +68,7 @@ main h2 {
     align-self: center;
 }
 main section {
-    padding: 2vh;
+    padding: 1vh;
     flex: 50%;
     width: 50%;
     display: flex;
@@ -78,8 +80,9 @@ main section div {
     border-radius: 25px;
     background-color: var(--blank);
     max-height: 15%;
-    width: 250px;
-
+    gap: 1vh;
+    width: 30vh;
+    cursor: pointer;
     display: flex;
     justify-content: center;
 }
@@ -125,7 +128,7 @@ main img {
 /* FOOTER */
 
 footer {
-    flex: 33%;
+    flex: 32%;
     max-height: 32%;
     max-width: 100%;
     
@@ -133,17 +136,23 @@ footer {
     background-color: var(--blank);
     
     display: flex;
-    align-items: center;
     padding: 2vh;
 }
 footer img {
     display: flex;
-    flex-flow: wrap;
 }
 footer figure {
+    border-radius: 25px;
+    background-color: var(--lilac);
     margin: 0;
-    padding: 0;
-    width: min-content;
+    padding: 1vh;
+}
+footer figure:hover {
+    background-color: var(--purple);
+}
+footer h3 {
+    align-self: center;
+    max-width: 12%;
 }
 .othersContainer {
     display: flex;
@@ -151,8 +160,51 @@ footer figure {
     /* align-items: center; */
 }
 .othersFigs {
-    max-width: 100%;
+    padding: 2vh 0;
+    max-width: 88%;
     display: flex;
     justify-content: space-around;
-    max-height: 200px;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media only screen and (max-width: 1200px) {
+    main {
+        padding: 2vh 10vh;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    body {
+        height: 97vh;
+        width: 98vw;
+    }
+    header {
+        max-height: 10%;
+        flex: 10%;
+    }
+    header figure {
+        margin: 2vh;
+    }
+    main {
+        flex-direction: column wrap;
+        padding: 2vh 10vh;
+        
+        max-height: 60%;
+        flex: 60%;
+        flex-wrap: wrap;
+    }
+    main section div {
+        max-height: 4%;
+    }
+    main section figure {
+        max-height: 20%;
+    }
+    .title figure {
+        max-height: 100%;
+    }
+    footer img {
+        display: none;
+    }
 }
