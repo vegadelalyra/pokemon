@@ -179,6 +179,8 @@ footer h3 {
 
 @media only screen and (max-width: 750px) {
     body {
+        padding: 1vh 4vh 3vh 5vh;
+        overflow: hidden;
         height: 97vh;
         width: 93vw;
     }
@@ -217,38 +219,45 @@ footer h3 {
     }
     .parent { 
         width: 100%;
+        display: flex;
+        flex-flow: column wrap;
     }
     .child {
-        width: 50%;
+        width: 100%;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-between;
+        padding: 0vh 3vh;
     }
     .title figure {
         max-height: auto;
         max-width: 100%;
     }
     footer {
-        flex: 32%;
-        max-height: 32%;
-        display: flex;
-        flex-flow: column;
+        flex: 38%;
+        max-height: 38%;
+        padding: 0;
     }
     footer h3 {
-        width: 10%;
-        height: 10%;
         margin: 0;
+        max-width: none;
+        height: 1vw;
     }
     footer figure {
-        height: 30%;
-    }
-    footer img {
-        width: 100%;
-        flex-flow: column wrap;
+        height: 107px;
+        width: 100px;
     }
     .othersContainer {
         height: 10%;
         flex-flow: column;
+        align-items: center;
     }
     .othersFigs {
-        flex-flow: column wrap;
-        width: 30%;
+        flex-flow: row wrap;
+        width: 100%;
+        flex: 50%;
+        justify-content: space-between;
+        padding: 2vh 6vh;
+        gap: 6px;
     }
 }
